@@ -63,8 +63,11 @@ public class Landing_Page
 
 	@FindBy(xpath="//input[@id=\"number\"]")
 	WebElement res;
-
-	public void Captcha() 
+	
+	@FindBy(xpath="//a[@class=\"link waves-effect\"]")
+	WebElement bck;
+	
+	public void Captcha()  throws InterruptedException
 	{
 		String fme = fnm.getText();
 		int fam = Integer.parseInt(fme);
@@ -73,5 +76,7 @@ public class Landing_Page
 		int rn = fam + sam;
 		String resultString = String.valueOf(rn);
 		res.sendKeys(resultString);
+		Thread.sleep(2000);
+		bck.click();
 	}
 }
