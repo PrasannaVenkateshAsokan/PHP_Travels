@@ -76,6 +76,7 @@ public class Landing_Page
 		int rn = fam + sam;
 		String resultString = String.valueOf(rn);
 		res.sendKeys(resultString);
+		System.out.println("The result is "+resultString);
 		Thread.sleep(2000);
 		bck.click();
 	}
