@@ -39,3 +39,4 @@ public class Landing_Page_Test
 		   driver.close();
 	   }
 }
+//Exit the Browser
